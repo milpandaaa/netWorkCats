@@ -20,10 +20,10 @@ class DogsAdapter(
     }
 
     override fun onBindViewHolder(holder: CatViewHolder, position: Int) {
-        holder.bind(dog = dogs[position], position = position)
+        holder.bind(dog = dogsFilterLists[position], position = position)
     }
 
-    override fun getItemCount() = dogs.size
+    override fun getItemCount() = dogsFilterLists.size
 
     fun addDogs(newDogs: List<DogResponse>) {
         dogs += newDogs
@@ -84,9 +84,9 @@ class DogsAdapter(
 //
 //                // refresh the list with filtered data
 //                notifyDataSetChanged()
-                dogsFilterLists.clear()
-                dogsFilterLists.addAll(filterResults.values as MutableList<DogResponse>)
-                notifyDataSetChanged();
+//                dogsFilterLists.clear()
+//                dogsFilterLists.addAll(filterResults.values as MutableList<DogResponse>)
+                notifyDataSetChanged()
             }
         }
     }
